@@ -7,6 +7,7 @@ import android.app.PendingIntent;
 import android.os.SystemClock;
 import android.util.Log;
 import de.robv.android.xposed.IXposedHookLoadPackage;
+import de.robv.android.xposed.XC_MethodHook;
 import de.robv.android.xposed.XC_MethodReplacement;
 import de.robv.android.xposed.XposedHelpers;
 import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam;
@@ -199,5 +200,17 @@ public class MobileRadioActiveFix implements IXposedHookLoadPackage {
 						return null;
 					}
 				});
+
+		XposedHelpers.findAndHookMethod(
+				"com.android.server.NetworkManagementService",
+				lpparam.classLoader, "notifyInterfaceClassActivity", int.class,
+				int.class, long.class, boolean.class, new XC_MethodHook() {
+					@Override
+					protected void beforeHookedMethod(MethodHookParam param)
+							throws Throwable {
+						param.args[3] = true;
+					}
+				});
 	}
+
 }

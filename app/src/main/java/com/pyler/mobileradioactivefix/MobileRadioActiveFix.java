@@ -26,7 +26,6 @@ public class MobileRadioActiveFix implements IXposedHookLoadPackage {
                 new XC_MethodHook() {
                     @Override
                     protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
-                        XposedBridge.log("Hooking Mobile Radio Active Fix...");
                         param.args[3] = true;
                     }
                 }

@@ -1,2 +1,0 @@
-# MobileRadioActiveFix
-[Xposed module] MobileRadioActiveFix

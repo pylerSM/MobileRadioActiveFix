@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Mobile Radio Active Fix</string>
+    <string name="app_description">Fixes mobile radio active bug</string>
+</resources>

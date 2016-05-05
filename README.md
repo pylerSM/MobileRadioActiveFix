@@ -1,2 +1,2 @@
 # MobileRadioActiveFix
-[Xposed module] MobileRadioActiveFix
+[Xposed module] Fix for Mobile Radio Active bug

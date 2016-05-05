@@ -10,7 +10,7 @@
 .idea/workspace.xml
 .DS_Store
 .gradle/
-gradle/
+#gradle/ wrapper dir (needed by Travis)
 build/
 local.properties
 *.jks

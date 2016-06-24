@@ -1,0 +1,20 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.3'
+    defaultConfig {
+        applicationId 'com.pyler.mobileradioactivefix'
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 122
+        versionName '1.2.2'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+dependencies {
+    provided 'de.robv.android.xposed:api:82'
+}

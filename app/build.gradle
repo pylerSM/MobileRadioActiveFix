@@ -6,8 +6,8 @@ android {
         applicationId 'com.pyler.mobileradioactivefix'
         minSdkVersion 21
         targetSdkVersion 23
-        versionCode 122
-        versionName '1.2.2'
+        versionCode 130
+        versionName '1.3'
     }
     buildTypes {
         release {

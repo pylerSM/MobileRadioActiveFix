@@ -15,7 +15,7 @@ public class MobileRadioActiveFix implements IXposedHookLoadPackage {
     @Override
     public void handleLoadPackage(LoadPackageParam lpparam) throws Throwable {
 
-        if (!lpparam.packageName.equals(PACKAGE_NAME))
+        if (!PACKAGE_NAME.equals(lpparam.packageName))
             return;
 
         findAndHookMethod(
